@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "e60nbXAC8g4h8fj54238+o6Ey+XFd/VUR+CeQMp7FOs=",
+  "Source": "NoSQL_MongoDb",
+  "BasePath": "_content/NoSQL_MongoDb",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
