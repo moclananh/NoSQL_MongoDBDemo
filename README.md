@@ -1,34 +1,16 @@
+# MongoDB .NET CRUD Demo
 
-The first, we need to create database name in the MongoDB
+## Project Summary
+This project is a demonstration of connecting to MongoDB using .NET to perform CRUD (Create, Read, Update, Delete) operations on products and categories. The project showcases how to use MongoDB as a NoSQL database with .NET applications.
 
-Step to config:
-1. Install MongoDb package
-  <ItemGroup>
-       <PackageReference Include="MongoDB.Driver" Version="2.25.0" />
-  </ItemGroup>
-2. Setting
-2.1 Create class MongoDbSetting:
- public string ConnectionURL { get; set; } = null;
- public string DatabaseName { get; set; } = null;
+## Key Features
+- **Product Management**: Create, read, update, and delete products.
+- **Category Management**: Create, read, update, and delete categories.
+- **MongoDB Integration**: Seamless integration with MongoDB for data storage and retrieval.
+- **RESTful API**: Expose CRUD operations via a RESTful API.
 
-2.2 Configuration in json file
-  "MongoDB": {
-    "ConnectionURL": "mongodb://localhost:27017",
-    "DatabaseName":  "demo_mongodb"
-  },
-
-
-3. Create Models
-//Primary Key form (auto generated)
- [BsonId]
- [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]
- public string Id { get; set; }
-
-
-4. Create MongoService and controller
-
-5. Config in Program
-//setting mongodb here
-builder.Services.Configure<MongoDbsetting>(builder.Configuration.GetSection("MongoDB"));
-builder.Services.AddSingleton<MongoDbService>(); //declare DI
-
+## Technical Details
+- **Frontend**: ASP.NET Core MVC for user interface.
+- **Backend**: .NET Core for business logic and data access.
+- **Database**: MongoDB for storing product and category data.
+- **Deployment**: Can be hosted on any .NET compatible server or cloud service.
